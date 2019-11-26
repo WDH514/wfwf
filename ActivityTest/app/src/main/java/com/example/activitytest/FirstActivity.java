@@ -3,6 +3,7 @@ package com.example.activitytest;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,8 +21,10 @@ public class FirstActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FirstActivity.this,"You clicked Button 1",
-                        Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
+                startActivity(intent);
+                //Toast.makeText(FirstActivity.this,"You clicked Button 1",
+                       // Toast.LENGTH_SHORT).show();
             }
         });
     }
