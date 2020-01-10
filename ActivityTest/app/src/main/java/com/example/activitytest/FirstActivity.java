@@ -22,9 +22,9 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(FirstActivity.this,"You clicked Button 1",Toast.LENGTH_SHORT).show();
-                //Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
-                Intent intent=new Intent("com.example.activitytest.ACTION_START");
-                intent.addCategory("com.example.activitytest.MY_CATEGORY");
+                Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
+                //Intent intent=new Intent("com.example.activitytest.ACTION_START");
+                //intent.addCategory("com.example.activitytest.MY_CATEGORY");
                 startActivity(intent);
                 //Toast.makeText(FirstActivity.this,"You clicked Button 1",
                        // Toast.LENGTH_SHORT).show();
