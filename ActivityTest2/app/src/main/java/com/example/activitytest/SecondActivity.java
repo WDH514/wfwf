@@ -27,4 +27,10 @@ public class SecondActivity extends AppCompatActivity {
         //String data=intent.getStringExtra("extra_data");
         //Log.d("SecondActivity",data);
     }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d("SecondActivity","onDestroy");
+    }
 }
