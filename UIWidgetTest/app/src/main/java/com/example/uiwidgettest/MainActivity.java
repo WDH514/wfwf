@@ -1,7 +1,9 @@
 package com.example.uiwidgettest;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,9 +38,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
         switch (v.getId()){
             case R.id.button:
-                int progress=progressBar.getProgress();
+                AlertDialog.Builder dialog=new AlertDialog.Builder(MainActivity.this);
+                dialog.setTitle("This is Dialog");
+                dialog.setMessage("Something important.");
+                dialog.setCancelable(false);
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                dialog.show();
+                /*int progress=progressBar.getProgress();
                 progress=progress+10;
-                progressBar.setProgress(progress);
+                progressBar.setProgress(progress);*/
                 /*if (progressBar.getVisibility()==View.GONE){
                     progressBar.setVisibility(View.VISIBLE);
                 }
