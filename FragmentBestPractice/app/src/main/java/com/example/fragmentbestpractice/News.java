@@ -1,7 +1,6 @@
-package com.example.wdhwdh;
+package com.example.fragmentbestpractice;
 
 public class News {
-
         private String title;
         private String content;
         public String getTitle(){
@@ -19,4 +18,4 @@ public class News {
         public void setContent(String content){
             this.content=content;
         }
-    }
+}

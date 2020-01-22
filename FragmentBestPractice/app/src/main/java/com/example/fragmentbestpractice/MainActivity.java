@@ -1,4 +1,4 @@
-package com.example.wdhwdh;
+package com.example.fragmentbestpractice;
 
 import androidx.appcompat.app.AppCompatActivity;
 

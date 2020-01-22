@@ -1,4 +1,4 @@
-package com.example.wdhwdh;
+package com.example.fragmentbestpractice;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.wdhwdh", appContext.getPackageName());
+        assertEquals("com.example.fragmentbestpractice", appContext.getPackageName());
     }
 }
