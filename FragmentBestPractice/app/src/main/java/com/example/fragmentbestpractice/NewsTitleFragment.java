@@ -35,6 +35,7 @@ public class NewsTitleFragment extends Fragment {
             News news=new News();
             news.setTitle("This is news title"+i);
             news.setContent(getRandomLengthContent("This is news content"+i+"."));
+            newsList.add(news);
         }
         return newsList;
     }
