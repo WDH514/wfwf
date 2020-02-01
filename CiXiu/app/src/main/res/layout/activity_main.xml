@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/backing1"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/viewbg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="350dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape"
+            android:text="绣"
+            android:textColor="#ffff00"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginRight="9.282dp"
+            android:layout_toLeftOf="@id/button1"
+            android:layout_below="@id/button1"
+            android:background="@drawable/shape2"
+            android:text="Button2"
+            android:textColor="#ffff00"
+            android:textSize="10dp" />
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginLeft="9.282dp"
+            android:layout_toRightOf="@id/button1"
+            android:layout_below="@id/button1"
+            android:background="@drawable/shape2"
+            android:text="Button4"
+            android:textColor="#ffff00"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@id/button1"
+            android:layout_toLeftOf="@id/button4"
+            android:background="@drawable/shape"
+            android:text="Button3"
+            android:textColor="#ffff00"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+
+</FrameLayout>
