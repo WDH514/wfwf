@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
     private Button button3;
     private Button button4;
     private boolean isVisible=true;
+    private boolean key=true;
+
+    private long exitTime = 0;
 
     private static final int REQUEST_CODE_ALBUM = 100;//打开相册
     private static final int REQUEST_CODE_CAMERA = 101;//打开相机
@@ -71,5 +75,36 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,REQUEST_CODE_ALBUM);
             }
         });
+    }
+
+
+
+    /*@Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        button2.setVisibility(View.INVISIBLE);
+        button3.setVisibility(View.INVISIBLE);
+        button4.setVisibility(View.INVISIBLE);
+        isVisible=true;
+        //Toast.makeText(this, "按下了back键   onBackPressed()", Toast.LENGTH_SHORT).show();
+    }*/
+
+
+
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if((System.currentTimeMillis()-exitTime) > 2000){
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
