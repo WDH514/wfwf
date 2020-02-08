@@ -41,8 +41,8 @@
             android:layout_marginRight="9.282dp"
             android:layout_toLeftOf="@id/button1"
             android:layout_below="@id/button1"
-            android:background="@drawable/button24b"
-            android:text="拍照"
+            android:background="@drawable/button2bg"
+            android:text=""
             android:textColor="#ffff00"
             android:textSize="15dp" />
 
