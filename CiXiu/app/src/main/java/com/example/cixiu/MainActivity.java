@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
+                /*Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
-                startActivityForResult(intent,REQUEST_CODE_ALBUM);
+                startActivityForResult(intent,REQUEST_CODE_ALBUM);*/
             }
         });
     }
